@@ -369,6 +369,10 @@ p{
     margin-bottom: 10px;
 }
 
+.carrito{
+    float: right;
+}
+
 
 @media (max-width:991px){
 
