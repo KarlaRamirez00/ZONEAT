@@ -206,3 +206,11 @@ body{
     }
 }
 
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: blue;
+    font-size: 25px;
+    padding-top: 20px;
+}

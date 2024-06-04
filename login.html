@@ -11,7 +11,32 @@
 </head>
 
 <body>
+      
+    <script >
+        let regex = /forma/ 
+        let str = "forma alguna forma de hacer esto "
+        imprimir(str,regex);
+        // Encontrará en este caso si hay una coincidencia en el texto con la palabra /forma/
+    
+    
+        regex = /[ia]/
+        //Al poner corchetes buscará si hay o no una de esas coincidencias
+        //En este caso buscará la letra "i" o letra "a" y si no está
+        //Devolverá false y Null en el caso de Match
+        //También se pueden usar rangos y numeros como /[0-3]/ encontrará los numeros del 0 al 3
+    
+        str = "Como estuvo?"
+        imprimir(str, regex)
+    
         
+        
+    
+        function imprimir (str,regex){
+            console.log(regex.test(str))
+            console.log(str.match(regex))
+        }
+</script>
+
         <img class="bg" src="img/bg.png" alt="">
         <div class="container-form register">
             <div class="information">
@@ -32,25 +57,38 @@
                         <i class='bx bxl-google'></i>
                     </div>
                     <p>O usa tu correo para registrarte</p>
-                    <form class="form">
-                        <label>
+
+                    <form action="" method="POST" id="form">
+                        <div class="form">
+                            <div class="grupo">
                             <i class='bx bxs-user-circle' ></i>
-                            <input type="text" placeholder="Nombre Completo">
-                        </label>
-                        <label>
+                            <input type="Nombre" placeholder="Nombre" name="" id="name" ><span class="barra"></span>
+                            <label for=""></label>
+                        </div>
+
+                        <div class="form">
                             <i class='bx bx-envelope' ></i>
-                            <input type="email" placeholder="Correo electronico">
-                        </label>
-                        <label>
+                            <input type="email" placeholder="Correo electronico" name="" id="email" ><span class="barra"></span>
+                            <label for=""></label>
+                        </div>
+
+                        <div class="form">
                             <i class='bx bx-lock-alt' ></i>
-                            <input type="password" placeholder="Contraseña">
-                        </label>
+                            <input type="password" placeholder="Contraseña" name="" id="password" ><span class="barra"></span>
+                            <label for=""></label>
+                        </div>
                         <input type="submit" value="registrarse">
+                        <p class="warnings" id="warnings"></p>
                     </form>
                 </div>
             </div>
         </div>
     
+
+  
+
+
+
         <div class="container-form login hide">
             <div class="information">
                 <div class="info-childs">
@@ -86,8 +124,9 @@
 
     
 
-
+        <script src="app.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>
