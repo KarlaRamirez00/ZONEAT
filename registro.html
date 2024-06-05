@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstáHelaoJuan</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <style>
+        :root {
+            --colorTextos: #49454567;
+        }
+        
+        
+        *,
+        ::before,
+        ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+    
+        
+        form{
+            background: #fff;
+            padding: 40px 0;
+            box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        
+        .form{
+            width: 100%;
+            margin: auto;
+        }
+        
+        form .grupo{
+            position: relative;
+            margin: 45px ;
+        }
+        
+        input{
+            background: none;
+            color: #c6c6c6;
+            font-size: 18px;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid var(--colorTextos);
+        }
+        
+        
+        
+        input:focus{ 
+            outline: none;
+            color: #5e5d5d;
+        }
+        
+        label{
+            color: var(--colorTextos);
+            font-size: 16px;
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            transition: 0.5s ease all;
+            pointer-events: none;
+        }
+        
+        input:focus~label,
+        input:valid~label{
+            top: -14px;
+            font-size: 12px;
+            color: black;
+        }
+        
+        .barra{
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+        
+        .barra::before{
+            content: "";
+            height: 2px;
+            width: 0%;
+            bottom: 0;
+            position: absolute;
+            background: linear-gradient(to right, #dad315, #eeb925);
+            transition: 0.3s ease width;
+            left: 0;
+        }
+        
+        input:focus~.barra::before{
+            width: 100%;
+        }
+        
+        .warnings{
+            width: 200px;
+            text-align: center;
+            margin: auto;
+            color: rgb(215, 127, 26);
+            font-size: 25px;
+            padding-top: 20px;
+        }
+        .alerta{
+            width: 200px;
+            text-align: center;
+            margin: auto;
+            color: rgb(215, 127, 26);
+            font-size: 25px;
+            padding-top: 20px;
+        }
+
+
+        button{
+            background-color:  #ff9000;
+            border: none;
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            color: #fff;
+            height: 40px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width:500px){
+            form{
+                width: 80%;
+            }
+        }
+        .form-control{ 
+            margin-left: 4%;
+            padding: 4%;       
+            width: 92%;
+            height: 50px;
+
+        }
+        
+    </style>
+
+    <header class="header">
+        
+        <img class="bg" src="img/bg.png" alt="">
+        <div class="menu container">
+            
+            <img src="img/LOGO-ZONEAT.png" alt="" style="padding-top: 0.5%" width="80" height="70">
+            
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#footer-inicio">Contacto</a></li>
+                    <li><a href="#footer-inicio">Registra tu Local</a></li>
+                </ul>
+            </nav>
+            
+                <a href="login.html" class="btn-1">Iniciar Sesión</a>
+            </div>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1><br><span>Bienvenidos a ZONEAT</span> <br> Disfruta de nuestras recomendaciones</h1>
+                <p>
+                    Si tienes un local llegaste al lugar indicado, puedes
+                    contactarte con nosotros y te enviaremos mensualidades para que
+                    seas parte de nuestra familia ZONEAT. Más abajo puedes llenar el 
+                    formulario y registrar tu local con nosotros.
+                </p>
+                <a href="quienesSomos.html" class="btn-1">¿Que es ZONEAT?</a>
+            </div>
+            <div class="header-img">
+                <img src="img/pl-1.png" alt="">
+            </div>
+
+        </div>
+
+    </header>
+
+
+              <!-- Formulario para contactar -->
+          
+              <br><br> 
+              <header class="container1">
+                  <div class="container1-content container">
+                      <div class="container1-txt">
+          
+                        <form action="" method="POST" id="form">
+                          <div class="form">
+                              <h1 style="padding: 4%;" >C O N T A C T A N O S </h1>
+                              <div class="grupo">
+                                  <input type="text" name="" id="name" ><span class="barra"></span>
+                                  <label for="">Nombre</label>
+                              </div>
+                              <div class="grupo">
+                                  <input type="apell" name="" id="apellido" ><span class="barra"></span>
+                                  <label for="">Apellido</label>
+                              </div>
+                              <div class="grupo">
+                                  <input type="ciu" name="" id="ciudad" ><span class="barra"></span>
+                                  <label for="">Ciudad</label>
+                              </div>
+                              <div class="grupo">
+                                  <input type="fono" name="" id="telefono" ><span class="barra"></span>
+                                  <label for="">Telefono</label>
+                              </div>                
+                              <button type="submit">ENVIAR</button>
+                              <p class="warnings" id="warnings"></p>
+                          </div>
+                      </form>
+          
+          
+                      <form class="was-validated" style="padding: 1%;" >
+                        <div class="mb-3">
+                          <h1 style="padding: 4%;" >E S C R I B E N O S </h1>
+                          <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Por favor, escribe tu mensaje." required></textarea>
+              <!-- esto es para java en el boton-->
+              <p id="demo"></p>
+              <button type="submit" onclick='document.getElementById("demo"), alert("Envío exitoso!")= ""'>ENVIAR</button>         
+               </div>
+                     </form>
+
+                     <form action="" method="POST" id="zoneat">
+                        <div class="form">
+                            <h1 style="padding: 4%;" >R E G I S T R A T E</h1>
+                            <div class="grupo">
+                                <i class='bx bxs-user-circle' ></i>
+                                <input type="local" placeholder="Local" name="" id="local" ><span class="barra"></span>
+                                <label for=""></label>
+                            </div>
+                            <div class="grupo">
+                                <i class='bx bx-envelope' ></i>
+                                <input type="email" placeholder="Correo electronico" name="" id="email" ><span class="barra"></span>
+                                <label for=""></label>
+                            </div>
+                            <div class="grupo">
+                                <i class='bx bx-lock-alt' ></i>
+                                <input type="password" placeholder="Contraseña" name="" id="password" ><span class="barra"></span>
+                                <label for=""></label>
+                            </div>
+                            <button type="submit">ENVIAR</button>
+                            <p class="alerta" id="alerta"></p>
+                        </form>
+
+
+    <!-- Sección para... -->
+    <section class="app container">
+        
+        <div class="app-txt">
+            <h2>Proximamente nuestra App</h2>
+            <p>
+                Como queremos ayuda a mas viajeros gastronomicos, proximamente ZONEAT
+                incorporara su app movil, para que mas personas puedan disgustar de platos
+                que cubran sus necesidades.
+            </p>
+            <div class="descarga">
+                <img src="img/store1.png" alt="">
+                <img src="img/store2.png" alt="">
+            </div>
+        </div>
+
+        <div class="app-img">
+            <img src="img/app.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer-inicio" class="footer">
+
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Contactos</h3>
+                <ul>
+                    <li><a href="#">+56 9 5451 2548</a></li>
+                    <li><a href="#">+56 2 5478 5545</a></li>
+
+                    
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Correo</h3>
+                <ul>
+                    <li><a href="#">contacto@zonear.cl</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Ubicación</h3>
+                <ul>
+                    <li><a href="#">Dr. Manuel Barros Borgoño 71 OF 1306, 
+                                    <br>7500593 Providencia, Región Metropolitana</a></li>
+            </div>
+            <!--Puede ser a final de semestre-->
+            <!-- <div class="link">
+                <h3>Lorem</h3>
+                <div class="descarga">
+                    <img src="img/store1.png" alt="">
+                    <img src="img/store2.png" alt="">
+                </div>                
+            </div> -->
+
+        </div>
+
+    </footer>
+
+    
+    <script src="empresa.js"></script>
+    <script src="registroempresa.js"></script>
+    
+   
+</body>
+
+</html>
