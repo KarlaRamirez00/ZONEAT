@@ -14,6 +14,15 @@
 
 
     <style>
+        .footer{
+    padding: 50px 0;
+    background-color: #ff9000;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
         :root {
             --colorTextos: #49454567;
         }
@@ -121,20 +130,14 @@
 
 
         button{
-            background-color:  #ff9000;
+            margin-left: 45%;
             border: none;
-            display: block;
-            width: 80%;
-            margin: 10px auto;
-            color: #fff;
-            height: 40px;
-            font-size: 16px;
             cursor: pointer;
         }
-        
-        @media screen and (max-width:500px){
+
+        @media screen and (max-width:991px){
             form{
-                width: 80%;
+                width: 100%;
             }
         }
         .form-control{ 
@@ -147,31 +150,34 @@
         
     </style>
 
-    <header class="header">
+<header class="header">
         
+    <img class="bg" src="img/bg.png" alt="">
+    <div class="menu container">
         
-        <div class="menu container">
-            
-            <img src="img/LOGO/Logo-Tipo_Apaisado.png" alt="" style="padding-top: 10px; margin: 10px;" width="200">
-            
-            <input type="checkbox" id="menu">
-            <label for="menu">
-                <img src="img/menu.png" class="menu-icono" alt="">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#footer-inicio">Contacto</a></li>
-                    <li><a href="#footer-inicio">Registra tu Local</a></li>
-                </ul>
-            </nav>
-            
-                <a href="login.html" class="btn-1">Iniciar Sesión</a>
-            </div>
+        <img src="img/LOGO/Logo-Tipo_Apaisado.png" alt="" style="padding-top: 10px; margin: 10px;" width="200"> 
+        
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <img src="img/menu.png" class="menu-icono" alt="">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#footer-inicio">Contacto</a></li>
+                <li><a href="registro.html">Registra tu Local</a></li>
+            </ul>
+        </nav>
+        
+            <a href="login.html" class="btn-1">Iniciar Sesión</a>
         </div>
+    </div>
+
+
 
         <div class="header-content container">
             <div class="header-txt">
+                <br><br><br><br><br>
                 <h1><br><span>Bienvenidos a ZONEAT</span> <br> Disfruta de nuestras recomendaciones</h1>
                 <p>
                     Si tienes un local llegaste al lugar indicado, puedes
@@ -199,7 +205,7 @@
           
                         <form action="" method="POST" id="form">
                           <div class="form">
-                              <h1 style="padding: 4%;" >C O N T A C T A N O S </h1>
+                              <h1 style="padding: 4%;" >R E G I S T R A T E </h1>
                               <div class="grupo">
                                   <input type="text" name="" id="name" ><span class="barra"></span>
                                   <label for="">Nombre</label>
@@ -216,8 +222,29 @@
                                   <input type="fono" name="" id="telefono" ><span class="barra"></span>
                                   <label for="">Telefono</label>
                               </div>                
-                              <button type="submit">ENVIAR</button>
+                              <div class="grupo">
+                                <i class='bx bxs-user-circle' ></i>
+                                <input type="local" placeholder="Local" name="" id="local" ><span class="barra"></span>
+                                <label for=""></label>
+                            </div>
+                            <div class="grupo">
+                                <i class='bx bx-envelope' ></i>
+                                <input type="email" placeholder="Correo electronico" name="" id="email" ><span class="barra"></span>
+                                <label for=""></label>
+                            </div>
+                            <div class="grupo">
+                                <i class='bx bx-lock-alt' ></i>
+                                <input type="password" placeholder="Contraseña" name="" id="password" ><span class="barra"></span>
+                                <label for=""></label>
+                            </div>    
+                            <button class="btn-1"> <a type="submit">ENVIAR</a></button>
+
+                            
                               <p class="warnings" id="warnings"></p>
+                                        
+              <p id="demo"></p>
+              <button class="btn-1"><a href="login.html" onclick='document.getElementById("demo"), alert("Puedes ir a pagar!")= ""' href="index.html" type="submit">PAGAR</a></button>
+
                           </div>
                       </form>
           
@@ -232,28 +259,8 @@
                </div>
                      </form>
 
-                     <form action="" method="POST" id="zoneat">
-                        <div class="form">
-                            <h1 style="padding: 4%;" >R E G I S T R A T E</h1>
-                            <div class="grupo">
-                                <i class='bx bxs-user-circle' ></i>
-                                <input type="local" placeholder="Local" name="" id="local" ><span class="barra"></span>
-                                <label for=""></label>
-                            </div>
-                            <div class="grupo">
-                                <i class='bx bx-envelope' ></i>
-                                <input type="email" placeholder="Correo electronico" name="" id="email" ><span class="barra"></span>
-                                <label for=""></label>
-                            </div>
-                            <div class="grupo">
-                                <i class='bx bx-lock-alt' ></i>
-                                <input type="password" placeholder="Contraseña" name="" id="password" ><span class="barra"></span>
-                                <label for=""></label>
-                            </div>
-                            <button type="submit">ENVIAR</button>
-                            <p class="alerta" id="alerta"></p>
-                        </form>
 
+                    </header>
 
     <!-- Sección para... -->
     <!-- <section class="app container">
@@ -277,49 +284,49 @@
 
     </section> -->
 
-    <!-- FOOTER -->
-    <footer id="footer-inicio" class="footer">
+ <!-- FOOTER -->
+ <footer id="footer-inicio" class="footer">
 
-        <div class="footer-content container">
-            <div class="link">
-                <h3>Contactos</h3>
-                <ul>
-                    <li><a href="#">+56 9 5451 2548</a></li>
-                    <li><a href="#">+56 2 5478 5545</a></li>
+    <div class="footer-content container">
+        <div class="link">
+            <h3>Contactos</h3>
+            <ul>
+                <li><a href="#">+56 9 5451 2548</a></li>
+                <li><a href="#">+56 2 5478 5545</a></li>
 
-                    
-                </ul>
-            </div>
-
-            <div class="link">
-                <h3>Correo</h3>
-                <ul>
-                    <li><a href="#">contacto@zonear.cl</a></li>
-                </ul>
-            </div>
-
-            <div class="link">
-                <h3>Ubicación</h3>
-                <ul>
-                    <li><a href="#">Dr. Manuel Barros Borgoño 71 OF 1306, 
-                                    <br>7500593 Providencia, Región Metropolitana</a></li>
-            </div>
-            <!--Puede ser a final de semestre-->
-            <!-- <div class="link">
-                <h3>Lorem</h3>
-                <div class="descarga">
-                    <img src="img/store1.png" alt="">
-                    <img src="img/store2.png" alt="">
-                </div>                
-            </div> -->
-
+                
+            </ul>
         </div>
 
-    </footer>
+        <div class="link">
+            <h3>Correo</h3>
+            <ul>
+                <li><a href="#">contacto@zonear.cl</a></li>
+            </ul>
+        </div>
+
+        <div class="link">
+            <h3>Ubicación</h3>
+            <ul>
+                <li><a href="#">Dr. Manuel Barros Borgoño 71 OF 1306, 
+                                <br>7500593 Providencia, Región Metropolitana</a></li>
+        </div>
+        <!--Puede ser a final de semestre-->
+        <!-- <div class="link">
+            <h3>Lorem</h3>
+            <div class="descarga">
+                <img src="img/store1.png" alt="">
+                <img src="img/store2.png" alt="">
+            </div>                
+        </div> -->
+
+    </div>
+
+</footer>
 
     
     <script src="empresa.js"></script>
-    <script src="registroempresa.js"></script>
+    
     
    
 </body>

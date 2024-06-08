@@ -3,6 +3,9 @@ const nombre = document.getElementById("name")
 const apellido = document.getElementById("apellido")
 const ciudad = document.getElementById("ciudad")
 const telefono = document.getElementById("telefono")
+const local = document.getElementById("local")
+const email = document.getElementById("email")
+const pass = document.getElementById("password")
 const form = document.getElementById("form")
 const parrafo = document.getElementById("warnings")
 
@@ -28,6 +31,18 @@ form.addEventListener("submit", e=>{
     }
     if(telefono.value.length <8){
         warnings += `El telefono no es valido <br>`
+        entrar = true
+    }
+    if(local.value.length <6){
+        warnings += `El local no es valido <br>`
+        entrar = true
+    }
+    if(!regexEmail.test(email.value)){
+        warnings += `El email no es valido <br>`
+        entrar = true
+    }
+    if(pass.value.length < 8){
+        warnings += `La contraseña no es valida <br>`
         entrar = true
     }
     if(entrar){
