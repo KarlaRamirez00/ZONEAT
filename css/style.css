@@ -162,12 +162,12 @@ th, td{
 }
 
 .header-img{
-    width: 50%;
+    width: 40%;
     text-align: right;    
 }
 
 .header-img img{
-    width: 650px;
+    width: 530px;
 }
 
 .breakfast{
@@ -313,6 +313,7 @@ p{
     background-color: #ff9000;
     color: #ffffff;
     border-radius: 10px;
+
 }
 
 .btn-3:hover{
