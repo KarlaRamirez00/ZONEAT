@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoneat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos para las tarjetas de comentarios */
+        .comentarios {
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            margin-top: 20px; 
+        }
+
+        .card {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            flex: 1 1 300px; 
+        }
+
+        .estrellas {
+            color: gold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu container">
+        <img src="img/LOGO/Logo-Tipo_Apaisado.png" alt="" style="padding-top: 10px; margin: 10px;" width="200">
+
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <img src="img/menu.png" class="menu-icono" alt="">
+        </label>
+
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#footer-inicio">Contacto</a></li>
+                <li><a href="registro.html">Registra tu Local</a></li>
+            </ul>
+        </div>
+
+        <a href="login.html" class="btn-1">Iniciar Sesión</a>
+    </nav>
+
+    <div>
+        <iframe src="https://www.baryvuelvo.cl/" width="100%" height="600px" style="margin-top: 150px;" title="Quimey Sushi" frameborder="0" allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>
+    </div>
+    
+
+    <div class="comentarios">
+        <div class="card">
+            <h3>@usuario800</h3>
+            <div class="estrellas">
+                ⭐⭐⭐⭐⭐
+            </div>
+            <p>"¡Comida deliciosa y saludable."</p>
+        </div>
+        <div class="card">
+            <h3>@foodie_cl</h3>
+            <div class="estrellas">
+                ⭐⭐⭐
+            </div>
+            <p>"Buen ambiente, ideal para un break en la rutina."</p>
+        </div>
+        <div class="card">
+            <h3>@user666</h3>
+            <div class="estrellas">
+                ⭐⭐⭐⭐⭐
+            </div>
+            <p>"¡Me encantó este lugar, 100% recomendado!"</p>
+        </div>
+        <div class="card">
+            <h3>@michitech</h3>
+            <div class="estrellas">
+                ⭐⭐⭐
+            </div>
+            <p>"Buena comida, pero el servicio podría mejorar."</p>
+        </div>
+    </div>
+</body>
+</html>
