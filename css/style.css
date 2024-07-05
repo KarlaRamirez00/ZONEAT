@@ -450,12 +450,13 @@ p{
     }
 
     .breakfast{
-        padding: 30px;
+        padding: 10px;
     }
 
     .breakfast-content{
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .breakfast-1{
