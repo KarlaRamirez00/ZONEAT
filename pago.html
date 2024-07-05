@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Pago con Transbank</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 5px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"], button {
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    #payment-response {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+    <div class="container">
+        <h1>Simulación de Pago con Transbank</h1>
+        <form id="payment-form">
+            <label for="card-number">Número de Tarjeta:</label>
+            <input type="text" id="card-number" name="card-number" required>
+
+            <label for="card-expiry">Fecha de Expiración:</label>
+            <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA" required>
+
+            <label for="card-cvv">CVV:</label>
+            <input type="text" id="card-cvv" name="card-cvv" required>
+
+
+            <button class="btn-1"><a href="pago.html" type="submit">PAGAR</a></button>
+
+        <p id="payment-response"></p>
+        <button class="btn-1"><a href="index.html" type="submit">INICIO</a></button>
+
+    </div>
+</form>
+
+    <script src="pago.js"></script>
+</body>
+</html>

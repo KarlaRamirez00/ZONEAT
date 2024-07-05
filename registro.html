@@ -254,6 +254,99 @@
             </form>
     </header>
 
+ 
+    <script src="empresa.js"></script>
+    
+ 
+<style>
+    
+    button {
+        background-color: rgb(215, 127, 26);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    button:hover {
+        background-color: rgb(215, 127, 26);
+    }
+    
+    #cart {
+        margin-top: 30px;
+    }
+    
+    #cart h2 {
+        color: #333;
+    }
+    
+    #cart-items {
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        
+    }
+    
+ </style>
+
+
+
+ <header class="container1">
+    <div class="container1-content container">
+
+         <div class="container">
+             <h1 style="padding: 4%; text-align: center;" >CARRITO DE SUSCRIPCION </h1>
+
+             <!-- Productos -->
+             <div id="products-container">
+                 <div class="product-card">
+                    <h3 style=" text-align: center;"><a href="basica.html" >Suscripción Básica </a></h3>
+                    <p style=" text-align: center;">Suscribete y descrube los beneficios que ZONEAT tiene para ti</p>
+                     <div class="variant-options">
+                         <label><input type="radio" name="variant1" value="semanal" checked> Semanal</label>
+                         <label><input type="radio" name="variant1" value="mensual"> Mensual</label>
+                         <label><input type="radio" name="variant1" value="anual"> Anual</label>
+                     </div>
+                     <button onclick="addToCart('Suscripción Básica', 'variant1')">Agregar</button>
+                 </div>
+                 <br> <br>
+                 <div class="product-card" >
+                     <h3 style=" text-align: center;"><a href="premium.html" >Suscripción Premium </a></h3>
+                     <p style=" text-align: center;">Suscribete y descrube los beneficios que ZONEAT tiene para ti</p>
+
+                     <div class="variant-options" >
+                         <label><input  type="radio" name="variant2" value="mensual" checked> Mensual</label>
+                         
+                         <label><input type="radio" name="variant2" value="mensual"> Mensual</label>
+                       
+                         <label><input type="radio" name="variant2" value="anual"> Anual</label>
+                     </div>
+                    
+                     <button onclick="addToCart('Suscripción Premium', 'variant2')">Agregar</button>
+                 </div>
+                 <!-- Agrega más productos según tus necesidades -->
+             </div>
+     
+             <!-- Carrito de compras -->
+             <div id="cart">
+                <h1 style="padding: 4%; text-align: center;" >CARRITO  </h1>
+                <div id="cart-items"></div>
+                 <p id="total-price">Total: $0.00</p>
+                 <button class="btn-1"><a href="pago.html" id="checkout-btn">Pagar</a></button>
+                <br><br>
+                </div>
+         </div>
+        </div>
+
+    </header>
+     
+         <!-- JavaScript -->
+         <script src="cart.js"></script>
+   
+     
+
+
     <!-- FOOTER -->
     <footer id="footer-inicio" class="footer">
 
@@ -290,3 +383,6 @@
 </body>
 
 </html>
+
+
+
